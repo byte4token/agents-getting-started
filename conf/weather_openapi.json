@@ -1,0 +1,85 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Logic App Trigger",
+    "version": "1.0.0",
+    "description": "Calls the Logic App when an HTTP request is received."
+  },
+  "paths": {
+    "{path}": {
+      "post": {
+        "operationId": "triggerLogicApp",
+        "summary": "Trigger Logic App",
+        "description": "Sends a request to the Logic App HTTP trigger.",
+        "parameters": [
+          {
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "2016-10-01"
+            }
+          },
+          {
+            "name": "sp",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "{sp}"
+            }
+          },
+          {
+            "name": "sv",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "1.0"
+            }
+          },
+          {
+            "name": "sig",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "{sig}"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "location": {
+                    "type": "string",
+                    "description": "A city location"
+                  }
+                },
+                "required": ["location"]
+              },
+              "example": {
+                "location": "Seattle"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "{url}"
+    }
+  ]
+}
