@@ -1,18 +1,19 @@
-azure-ai-projects
-azure-ai-inference
-azure-ai-evaluation
-azure-core
-azure-identity
-ipython
-packaging
-psutil
-debugpy>=1.6.5
-ipython>=7.23.1
-jupyter-client>=6.1.12
-pyzmq>=24
-tornado>=6.1
-platformdirs>=2.5
-opentelemetry-api 
-opentelemetry-sdk
-azure-core-tracing-opentelemetry
-azure-ai-evaluation[redteam]
+# Azure SDK and AI Services
+azure-identity>=1.24.0
+azure-ai-projects>=1.1.0b2
+azure-ai-inference[opentelemetry]>=1.0.0b9
+azure-ai-evaluation>=1.10.0
+azure-ai-contentsafety>=1.0.0
+azure-search-documents>=11.5.0
+azure-ai-ml>=1.28.0
+
+# Telemetry and Monitoring  
+azure-monitor-opentelemetry>=1.6.0
+azure-core-tracing-opentelemetry>=1.0.0b12
+opentelemetry-exporter-otlp>=1.36.0
+opentelemetry-sdk>=1.36.0
+
+opentelemetry-instrumentation-openai-v2
+
+dotenv
+python-dotenv>=1.1.0

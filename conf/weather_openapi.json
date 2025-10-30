@@ -6,7 +6,7 @@
     "description": "Calls the Logic App when an HTTP request is received."
   },
   "paths": {
-    "/workflows/2c3d915297b148a3b86d151191a9f482/triggers/When_a_HTTP_request_is_received/paths/invoke": {
+    "/workflows/9adeacdf151e4b6e9a08c0f5b06951d1/triggers/When_a_HTTP_request_is_received/paths/invoke": {
       "post": {
         "operationId": "triggerLogicApp",
         "summary": "Trigger Logic App",
@@ -45,7 +45,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "default": "0TLNWb0pcIpa5ALkrayoVAq0bwqpg8AG5OCbRoLMWsE"
+              "default": "D8W3fmtQ6ln1GMxkhv6Y_f8VCA24Myia2u4SaJ1pPM4"
             }
           }
         ],
@@ -79,7 +79,7 @@
   },
   "servers": [
     {
-      "url": "https://prod-14.northcentralus.logic.azure.com"
+      "url": "https://prod-46.eastus.logic.azure.com"
     }
   ]
 }
