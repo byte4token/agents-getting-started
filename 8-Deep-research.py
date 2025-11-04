@@ -101,8 +101,7 @@ with project_client:
         #thread = agents_client.threads.get("thread_VmZRV0EFz40pbfe6MsBCnToo")
         print(f"Created thread, ID: {thread.id}")
 
-        #input_text = "There seems to be significant gaps in your planning on defining the initial taxonomy. When LLM are used to suggest a 3 level hierarchy base on the atomic facts, the output will vary significatnly. This will cause major issues when prunning/merging the hierarchies. We need to scope / ground the LLM to guide the suggestions. For example, the facts deal with people and the detail their birth, family, upbrining, relatives and contributions to society. Please research the techniques and best practices for LLMs to suggest hierarchies that are more coherent."
-        input_text = "I like your approach to building a coherent 3 level Taxonomy. Since you have access to LLMs lets work with a real example. Step 1: Research the life of Bibi Fatima as-Zahara. Step 2: Based on the retrieved information, propose an initial level 1 hierarchy."
+        input_text = "Research how investments trends have changed in the last 5 years for renewable energy sources globally. Provide a summary of key findings and cite relevant sources."
         # Create message to thread
         next_msg = agents_client.messages.create(
                 thread_id=thread.id,
